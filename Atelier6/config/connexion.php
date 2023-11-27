@@ -1,10 +1,13 @@
 <?php
-$dsn = "mysql:host=localhost;dbname=atelier6_dsi3_G2";
-$username = "root";
-$password = "";
-try {
-    $connexion = new PDO($dsn, $username, $password);
-} catch (Exception $e) {
-    echo "Erreur de connexion :" . $e->getMessage();
-    die;
+class connexion
+{
+    public function getConnexion()
+    {
+        $dsn = "mysql:host=localhost;dbname=atelier6_dsi3_G2";
+        $username = "root";
+        $password = "";
+
+        $connexion = new PDO($dsn, $username, $password);
+        return $connexion;
+    }
 }
